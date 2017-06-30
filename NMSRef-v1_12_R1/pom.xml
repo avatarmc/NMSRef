@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.avatarmc</groupId>
+		<artifactId>NMSRef-version-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../NMSRef-version-parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>NMSRef-v1_12_R1</artifactId>
+
+	<properties>
+		<spigot.version>1.12-R0.1-SNAPSHOT</spigot.version>
+		<spigot2srgURL>https://github.com/killme/MinecraftMappings/blob/1.12-snapshot/1.12/spigot2srg.srg?raw=true</spigot2srgURL>
+		<mcpURL>http://export.mcpbot.bspk.rs/mcp_snapshot/20170630-1.12/mcp_snapshot-20170630-1.12.zip</mcpURL>
+		<packageVersion>v1_12_R1</packageVersion>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.avatarmc</groupId>
+				<artifactId>NMSRef-mvn-plugin</artifactId>
+				<version>${project.version}</version>
+				<executions>
+					<execution>
+						<id>generate</id>
+						<goals>
+							<goal>generate-sources</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<outputDirectory>${nms-ref.target-dir}</outputDirectory>
+					<spigot2srgURL>${spigot2srgURL}</spigot2srgURL>
+					<mcpURL>${mcpURL}</mcpURL>
+					<targetPackage>com.avatarmc.ref.${packageVersion}.nms</targetPackage>
+					<mcPackage>net.minecraft.server.${packageVersion}</mcPackage>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot</artifactId>
+			<version>${spigot.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
