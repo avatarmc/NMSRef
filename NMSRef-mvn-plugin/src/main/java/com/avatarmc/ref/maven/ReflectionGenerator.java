@@ -263,7 +263,8 @@ public class ReflectionGenerator {
                     mapped = new FieldMapping(origName, null);
                 }
 
-                if (origName.contains("$VALUES")) {
+                if (origName.contains("$VALUES")
+                        || origName.contains("SWITCH_TABLE")) {
                     // TODO: Move to the other skips
                     continue;
                 }
