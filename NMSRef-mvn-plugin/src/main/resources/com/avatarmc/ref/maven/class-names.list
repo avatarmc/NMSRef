@@ -50,6 +50,7 @@ NBTTagIntArray
 EntitySenses
 EntityTypes
 
+EnumBannerPatternType
 TileEntityBanner$EnumBannerPatternType
 
 World
@@ -72,3 +73,15 @@ LootValueBounds
 LootTable
 LootTableRegistry
 LootTableInfo
+
+RegistrySimple
+RegistryMaterials
+
+IBlockProperties
+Block
+
+ControllerMove
+
+NavigationAbstract
+Pathfinder
+PathfinderAbstract
