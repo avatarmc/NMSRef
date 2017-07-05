@@ -8,10 +8,8 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.Reader;
 import java.io.Writer;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -44,11 +42,9 @@ import org.objectweb.asm.util.TraceSignatureVisitor;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.io.ByteStreams;
-import com.google.common.io.LineReader;
 import com.google.common.primitives.Primitives;
 
 import lombok.Data;
@@ -88,30 +84,18 @@ public class ReflectionGenerator {
     private final ClassLoader classLoader;
 
     private final File SOURCE_DIR;
+    private final Set<String> excludes;
 
     // Classes to generate reflectors for
     private static final Set<String> CLASS_WHITELIST = readWhiteList();
 
     private static Set<String> readWhiteList() {
-        ImmutableSet.Builder<String> out = ImmutableSet.builder();
-        try (//
-                InputStream is = ReflectionGenerator.class
-                        .getResourceAsStream("class-names.list");
-                Reader r = new InputStreamReader(is, StandardCharsets.UTF_8); //
-        ) {
-            LineReader lines = new LineReader(r);
-            String line;
-            while ((line = lines.readLine()) != null) {
-                line = line.trim();
-                if (!line.isEmpty() && !line.startsWith("#")) {
-                    out.add(line);
-                }
-            }
+        try (InputStream is = ReflectionGenerator.class
+                .getResourceAsStream("class-names.list")) {
+            return ListReader.read(is);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        return out.build();
     }
 
     @Data
@@ -714,7 +698,8 @@ public class ReflectionGenerator {
                     }
 
                     // Skip non white-listed classes
-                    if (!CLASS_WHITELIST.contains(fromClass)) {
+                    if (!CLASS_WHITELIST.contains(fromClass)
+                            || excludes.contains(fromClass)) {
                         break;
                     }
 
@@ -763,7 +748,8 @@ public class ReflectionGenerator {
                     String toField = toParts.get(toParts.size() - 1);
 
                     // Skip non white-listed classes
-                    if (!CLASS_WHITELIST.contains(fromClass)) {
+                    if (!CLASS_WHITELIST.contains(fromClass)
+                            || excludes.contains(fromClass)) {
                         break;
                     }
 

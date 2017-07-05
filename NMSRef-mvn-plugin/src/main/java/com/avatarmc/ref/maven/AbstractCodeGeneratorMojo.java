@@ -88,6 +88,12 @@ public abstract class AbstractCodeGeneratorMojo extends AbstractMojo {
      */
     String mcPackage;
 
+    /**
+     * @parameter default-value="ref-excludes.list"
+     * @required
+     */
+    File excludesFile;
+
     @Override
     public void execute() {
         try {
