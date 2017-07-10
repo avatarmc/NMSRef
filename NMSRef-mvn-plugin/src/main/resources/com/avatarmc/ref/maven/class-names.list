@@ -85,3 +85,32 @@ ControllerMove
 NavigationAbstract
 Pathfinder
 PathfinderAbstract
+
+# 1.12 advancements
+Advancement
+AdvancementDataPlayer
+AdvancementDataWorld
+AdvancementDisplay
+AdvancementFrameType
+AdvancementProgress
+AdvancementRewards
+Advancements
+AdvancementTree
+
+# 1.12 Advancement Criteria
+Criterion
+CriterionConditionDamage
+CriterionConditionDamageSource
+CriterionConditionDistance
+CriterionConditionEnchantments
+CriterionConditionEntity
+CriterionConditionItem
+CriterionConditionLocation
+CriterionConditionMobEffect
+CriterionConditionNBT
+CriterionConditionValue
+CriterionInstance
+CriterionInstanceAbstract
+CriterionProgress
+CriterionTrigger
+CriterionTriggers
