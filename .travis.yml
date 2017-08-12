@@ -1,21 +1,13 @@
-dist: trusty
+# Does not work on anything but osx for some reason
+os: osx
 language: java
 cache:
   directories:
   - build-tools
   - $HOME/.m2
-jdk:
-- openjdk8
-- oraclejdk8
 before_install:
 - mkdir -p build-tools
-- cd build-tools
-# Does not work for some reason
-#- curl https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -o build-tools/BuildTools.jar
-#- (cd build-tools && travis_retry java -jar BuildTools.jar --rev 1.9.2)
-#- (cd build-tools && travis_retry java -jar BuildTools.jar --rev 1.12)
-- curl https://cdn.getbukkit.org/spigot/spigot-1.12.jar -o spigot-1.12.jar
-- curl https://cdn.getbukkit.org/spigot/spigot-1.9.2.jar -o spigot-1.9.2.jar
-- mvn install:install-file -Dfile=spigot-1.12.jar -Dpackaging=jar -DgroupId=org.spigotmc -DartifactId=spigot -Dversion=1.12-R0.1-SNAPSHOT
-- mvn install:install-file -Dfile=spigot-1.9.2.jar -Dpackaging=jar -DgroupId=org.spigotmc -DartifactId=spigot -Dversion=1.9.2-R0.1-SNAPSHOT
-- cd ..
+- curl https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -o build-tools/BuildTools.jar
+- (cd build-tools && travis_retry java -jar BuildTools.jar --rev 1.9.2)
+- (cd build-tools && travis_retry java -jar BuildTools.jar --rev 1.12)
+- (cd build-tools && travis_retry java -jar BuildTools.jar --rev 1.12.1)
