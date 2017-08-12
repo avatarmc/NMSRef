@@ -74,6 +74,7 @@ LootTable
 LootTableRegistry
 LootTableInfo
 
+RegistryID
 RegistrySimple
 RegistryMaterials
 
