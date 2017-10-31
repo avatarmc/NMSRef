@@ -17,9 +17,9 @@
 	<modules>
 		<module>NMSRef-common</module>
 		<module>NMSRef-mvn-plugin</module>
-		<module>NMSRef-v1_12_R1</module>
 		<module>NMSRef-version-parent</module>
-		<module>NMSRef-v1_9_R2</module>
+		<!-- <module>NMSRef-v1_9_R2</module> -->
+		<module>NMSRef-v1_12_R1</module>
 	</modules>
 
 	<dependencies>
