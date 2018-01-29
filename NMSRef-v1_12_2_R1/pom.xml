@@ -9,11 +9,11 @@
 		<relativePath>../NMSRef-version-parent/pom.xml</relativePath>
 	</parent>
 
-	<artifactId>NMSRef-v1_12_R1</artifactId>
+	<artifactId>NMSRef-v1_12_2_R1</artifactId>
 
 	<properties>
-		<spigot.version>1.12-R0.1-SNAPSHOT</spigot.version>
-		<spigot2srgURL>https://github.com/killme/MinecraftMappings/blob/master/1.12/spigot2srg.srg?raw=true</spigot2srgURL>
+		<spigot.version>1.12.2-R0.1-SNAPSHOT</spigot.version>
+		<spigot2srgURL>https://github.com/killme/MinecraftMappings/blob/master/1.12.2/spigot2srg.srg?raw=true</spigot2srgURL>
 		<mcpURL>http://export.mcpbot.bspk.rs/mcp_snapshot/20180129-1.12/mcp_snapshot-20180129-1.12.zip</mcpURL>
 		<packageVersion>v1_12_R1</packageVersion>
 	</properties>
