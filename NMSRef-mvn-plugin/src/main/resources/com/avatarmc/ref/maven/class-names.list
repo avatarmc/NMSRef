@@ -56,7 +56,9 @@ TileEntityBanner$EnumBannerPatternType
 World
 WorldServer
 WorldBorder
+WorldProvider
 PlayerChunk
+Chunk
 Material
 DifficultyDamageScaler
 
@@ -90,6 +92,10 @@ ControllerMove
 NavigationAbstract
 Pathfinder
 PathfinderAbstract
+
+BaseBlockPosition
+BlockPosition
+BlockPosition$MutableBlockPosition
 
 # 1.12 advancements
 Advancement
