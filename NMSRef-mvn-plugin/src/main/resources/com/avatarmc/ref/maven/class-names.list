@@ -55,6 +55,10 @@ TileEntityBanner$EnumBannerPatternType
 
 World
 WorldServer
+WorldBorder
+PlayerChunk
+Material
+DifficultyDamageScaler
 
 MinecraftKey
 
