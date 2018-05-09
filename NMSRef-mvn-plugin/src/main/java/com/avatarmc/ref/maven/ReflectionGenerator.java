@@ -514,11 +514,6 @@ public class ReflectionGenerator {
             }
         }
 
-        if (typeString.contains("IDynamicTexture")) {
-            // Client shit
-            return;
-        }
-
         writeCommentBlock(out, mapped);
 
         int modifiers = f.getModifiers();

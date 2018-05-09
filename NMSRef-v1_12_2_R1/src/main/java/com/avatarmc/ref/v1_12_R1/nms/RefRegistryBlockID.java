@@ -4,7 +4,6 @@ import com.avatarmc.ref.AbstractRefBase;
 
 // @generated
 @javax.annotation.Generated("com.avatarmc.ref.maven.ReflectionGenerator")
-@SuppressWarnings("unused")
 public class RefRegistryBlockID extends AbstractRefBase {
     private static final java.lang.invoke.MethodHandles.Lookup lookup = getLookup(net.minecraft.server.v1_12_R1.RegistryBlockID.class);
     public static final Getter<java.util.IdentityHashMap<?, Integer>, net.minecraft.server.v1_12_R1.RegistryBlockID> identityMap = accessFinal(lookup, net.minecraft.server.v1_12_R1.RegistryBlockID.class, "a");
