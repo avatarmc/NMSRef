@@ -2,3 +2,4 @@ RegistrySimple
 RegistryMaterials
 CriterionTrigger
 RegistryID
+BlockPosition$MutableBlockPosition

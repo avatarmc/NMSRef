@@ -26,11 +26,20 @@ EntityMinecartTNT
 EntityTracker
 EntityTrackerEntry
 
+# Packets
 PacketPlayOutNamedEntitySpawn
 PacketPlayOutEntityStatus
+PacketPlayInUpdateSign
+PacketPlayOutBlockChange
+PacketPlayOutOpenSignEditor
+PacketPlayOutResourcePackSend
+PacketPlayOutWorldBorder
+PacketPlayOutMapChunk
+PacketPlayOutUnloadChunk
 
 DataWatcher
 
+# NBT
 NBTBase
 NBTBase$NBTNumber
 RefNBTNumber
@@ -71,6 +80,7 @@ EnchantmentManager
 
 Item
 
+# Loot
 LootEntityProperty
 LootItem
 LootSelectorLootTable
@@ -83,6 +93,7 @@ LootTable
 LootTableRegistry
 LootTableInfo
 
+# Registries
 RegistryID
 RegistrySimple
 RegistryMaterials
@@ -99,6 +110,11 @@ PathfinderAbstract
 BaseBlockPosition
 BlockPosition
 BlockPosition$MutableBlockPosition
+
+# Damage
+DamageSource
+EntityDamageSource
+EntityDamageSourceIndirect
 
 # 1.12 advancements
 Advancement
