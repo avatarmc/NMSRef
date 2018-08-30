@@ -1,6 +1,7 @@
 Container
 ContainerAnvil
 
+# Entities
 Entity
 EntityLiving
 EntityInsentient
@@ -22,7 +23,11 @@ EntityMinecartHopper
 EntityMinecartMobSpawner
 EntityMinecartRideable
 EntityMinecartTNT
+EntityZombie
+EntityHorse
+EntityHorseAbstract
 
+# Entity Networking
 EntityTracker
 EntityTrackerEntry
 
@@ -77,6 +82,17 @@ WeightedRandom$WeightedRandomChoice
 MinecraftKey
 
 EnchantmentManager
+
+# Attributes
+GenericAttributes
+AttributeMapBase
+AttributeMapServer
+AttributeModifiable
+AttributeRanged
+AttributeBase
+AttributeInstance
+AttributeModifier
+IAttribute
 
 Item
 
