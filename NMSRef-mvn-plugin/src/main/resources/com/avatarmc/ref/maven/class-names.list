@@ -119,13 +119,22 @@ Block
 
 ControllerMove
 
+# Navigation
+Navigation
 NavigationAbstract
+NavigationFlying
+NavigationGuardian
+NavigationSpider
 Pathfinder
 PathfinderAbstract
+PathPoint
+PathEntity
+Path
 
 BaseBlockPosition
 BlockPosition
 BlockPosition$MutableBlockPosition
+AxisAlignedBB
 
 # Damage
 DamageSource
