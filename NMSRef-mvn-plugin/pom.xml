@@ -14,8 +14,8 @@
 	<properties>
 		<maven-api.version>3.3.9</maven-api.version>
 		<maven-toolchain.version>2.2.1</maven-toolchain.version>
+		<maven-plugin-plugin.version>3.5.2</maven-plugin-plugin.version>
 		<maven-dependency-plugin.version>2.4</maven-dependency-plugin.version>
-		<maven-plugin-plugin.version>3.3</maven-plugin-plugin.version>
 		<asm.version>5.0.4</asm.version>
 	</properties>
 
